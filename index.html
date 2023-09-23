@@ -137,9 +137,11 @@
       <div class="column is-four-fifths">
         <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>
         <h2 class="subtitle has-text-centered">
+          <font size="+2">
           How can we learn a unified global-scale driving model from heterogeneous and distributed data? <br>
         We propose a high-capacity imitation learning agent that can flexibly adapt its decision-making across diverse traffic and regional nuances, <br> from turning right in right-hand traffic on red in San Francisco to left-hand traffic in London and handling the `Pittsburgh left' in Pittsburgh.
-     </h2>
+          </font>
+        </h2>
       </div>
     </div>
   </div>
@@ -259,11 +261,13 @@
         <h2 class="title is-2">Method</h2>
         <div class="content has-text-justified">
           <p>
+            <font size="+2">
             Our model maps image, region, speed, and conditional command observations to future decisions, parameterized
             as waypoints in the map view. To efficiently learn a high-capacity model, we leverage a multi-head cross
             attention module which fuses and adapts internal representations in a geo-aware manner. Our imitation objective,
             defined over human-demonstrated waypoints (outlined in green), the other command branches (outlined in red),
             and the predicted weights by the multi-head module, regularizes model optimization under diverse data distributions.
+            </font>
           </p>
           <img src="./resources/arch5.jpg" />
         </div>
@@ -281,7 +285,9 @@
           </div>
           <div class="content has-text-centered">
             <p>
+              <font size="+2">
               AnyD exhibits robustness in diverse scenarios, including turning right (wider turn) in Singapore and yielding to a ‘Pittsburgh left’.
+              </font>
             </p>
           </div>
         </div>
@@ -329,13 +335,15 @@
 <!-- TODO -->
 <section class="section" id="BibTeX">
   <div class="container content">
-    <h2 class="titile">BibTeX</h2>
+    <h2 class="title">BibTeX</h2>
+    <font size="+2">
     <pre><code>@inproceedings{zhu2023learning,
   title={Learning to Drive Anywhere},
   author={Zhu, Ruizhao and Huang, Peng and Ohn-Bar, Eshed and Saligrama, Venkatesh},
   booktitle={7th Annual Conference on Robot Learning},
   year={2023}}
 }</code></pre>
+    </font>
   </div>
 </section>
 
