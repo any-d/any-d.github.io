@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-<!--  <meta name="description" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image"> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta name="keywords" content="Worldsheet, View Synthesis, Mesh"> &lt;!&ndash; TODO &ndash;&gt;-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learning to Drive Anywhere</title>
+    <meta charset="utf-8">
+    <!--  <meta name="description" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image"> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta name="keywords" content="Worldsheet, View Synthesis, Mesh"> &lt;!&ndash; TODO &ndash;&gt;-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning to Drive Anywhere</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
 
-<!--  <link rel="shortcut icon" href="./favicon.ico"> -->
-  <!-- TODO -->
+    <!--  <link rel="shortcut icon" href="./favicon.ico"> -->
+    <!-- TODO -->
 
-  <!-- TODO -->
-<!--  <meta property="og:site_name" content="Worldsheet: View Synthesis from a Single Image" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:type" content="video.other" />-->
-<!--  <meta property="og:title" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:description" content="Hu, Pathak. Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image." /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:url" content="https://worldsheet.github.io/" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:image" content="https://worldsheet.github.io/static/images/preview.jpg" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:image:secure" content="https://worldsheet.github.io/static/images/preview.jpg" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:video" content="https://www.youtube.com/embed/j5aT3zRxFlk?rel=0&showinfo=0" /> &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta property="og:video:secure" content="https://www.youtube.com/embed/j5aT3zRxFlk?rel=0&showinfo=0" /> &lt;!&ndash; TODO &ndash;&gt;-->
-
-
-
-  <!-- TODO -->
-<!--  <meta property="article:publisher" content="https://pathak22.github.io" />-->
-<!--  <meta name="twitter:card" content="summary_large_image" />-->
-<!--  <meta name="twitter:title" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image" />-->
-<!--  <meta name="twitter:description" content="Hu, Pathak. Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image." />-->
-<!--  <meta name="twitter:url" content="https://worldsheet.github.io/" />-->
-<!--  <meta name="twitter:image" content="https://worldsheet.github.io/static/images/preview.jpg" />-->
+    <!-- TODO -->
+    <!--  <meta property="og:site_name" content="Worldsheet: View Synthesis from a Single Image" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:type" content="video.other" />-->
+    <!--  <meta property="og:title" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:description" content="Hu, Pathak. Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image." /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:url" content="https://worldsheet.github.io/" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:image" content="https://worldsheet.github.io/static/images/preview.jpg" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:image:secure" content="https://worldsheet.github.io/static/images/preview.jpg" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:video" content="https://www.youtube.com/embed/j5aT3zRxFlk?rel=0&showinfo=0" /> &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta property="og:video:secure" content="https://www.youtube.com/embed/j5aT3zRxFlk?rel=0&showinfo=0" /> &lt;!&ndash; TODO &ndash;&gt;-->
 
 
-  <!-- <meta name="twitter:label1" content="Written by" />
-  <meta name="twitter:data1" content="Deepak Pathak" /> -->
-  <!-- <meta name="twitter:label2" content="Filed under" />
-  <meta name="twitter:data2" content="" /> -->
-  <meta name="twitter:site" content="@pathak2206" />
-  <meta property="og:image:width" content="1600" />
-  <meta property="og:image:height" content="900" />
+    <!-- TODO -->
+    <!--  <meta property="article:publisher" content="https://pathak22.github.io" />-->
+    <!--  <meta name="twitter:card" content="summary_large_image" />-->
+    <!--  <meta name="twitter:title" content="Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image" />-->
+    <!--  <meta name="twitter:description" content="Hu, Pathak. Worldsheet: Wrapping the World in a 3D Sheet for View Synthesis from a Single Image." />-->
+    <!--  <meta name="twitter:url" content="https://worldsheet.github.io/" />-->
+    <!--  <meta name="twitter:image" content="https://worldsheet.github.io/static/images/preview.jpg" />-->
 
-<!--  <script src="https://www.youtube.com/iframe_api"></script>-->
-<!--  <meta name="twitter:card" content="player" />-->
-<!--  <meta name="twitter:image" content="https://worldsheet.github.io/static/images/preview.jpg" />   &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta name="twitter:player" content="https://www.youtube.com/embed/j5aT3zRxFlk" />   &lt;!&ndash; TODO &ndash;&gt;-->
-<!--  <meta name="twitter:player:width" content="640" />-->
-<!--  <meta name="twitter:player:height" content="360" />-->
+
+    <!-- <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Deepak Pathak" /> -->
+    <!-- <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="" /> -->
+    <meta name="twitter:site" content="@pathak2206"/>
+    <meta property="og:image:width" content="1600"/>
+    <meta property="og:image:height" content="900"/>
+
+    <!--  <script src="https://www.youtube.com/iframe_api"></script>-->
+    <!--  <meta name="twitter:card" content="player" />-->
+    <!--  <meta name="twitter:image" content="https://worldsheet.github.io/static/images/preview.jpg" />   &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta name="twitter:player" content="https://www.youtube.com/embed/j5aT3zRxFlk" />   &lt;!&ndash; TODO &ndash;&gt;-->
+    <!--  <meta name="twitter:player:width" content="640" />-->
+    <!--  <meta name="twitter:player:height" content="360" />-->
 
 
 </head>
 <body>
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Learning to Drive Anywhere</h1>
-          <div class="is-size-5 publication-authors">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Learning to Drive Anywhere</h1>
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://ruizhaoz.github.io">Ruizhao Zhu</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://scholar.google.com/citations?user=g06wPJwAAAAJ&hl=en">Peng Huang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://eshed1.github.io">Eshed Ohn-Bar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="https://venkatesh-saligrama.github.io/">Venkatesh Saligrama</a>
-              <br /> Boston University
+              <br/> Boston University
 
               <span class="brmod"></span>CoRL 2023</span>
-          </div>
+                    </div>
 
-<!--           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Facebook AI Research,</span>
-            <span class="author-block"><sup>2</sup>Carnegie Mellon University</span>
-          </div> -->
+                    <!--           <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>Facebook AI Research,</span>
+                                <span class="author-block"><sup>2</sup>Carnegie Mellon University</span>
+                              </div> -->
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
                 <a href="https://arxiv.org/abs/2309.12295"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -101,9 +100,9 @@
                   <span>Paper</span> <!-- TODO -->
                 </a>
               </span>
-             
-              <!-- Video Link. -->
-              <span class="link-block">
+
+                            <!-- Video Link. -->
+                            <span class="link-block">
                 <a href="#method_video"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -112,8 +111,8 @@
                   <span>Video</span> <!-- TODO -->
                 </a>
               </span>
-              <!-- Code Link. -->
-              <span class="link-block">
+                            <!-- Code Link. -->
+                            <span class="link-block">
                 <a href="https://github.com/h2xlab/anyd/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -122,39 +121,39 @@
                   <span>Code</span>
                   </a>
               </span>
-            </div>
+                        </div>
 
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <section class="hero teaser">
-  <div class="hero-body">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>
-        <h2 class="subtitle has-text-centered">
-         <font size="+3">
-          How can we learn a unified global-scale driving model from heterogeneous and distributed data? 
-           </font>
-          
-            <!-- 
-           <div class="content has-text-justified">
-          <p>
-          <font size="+2">
-        We propose a high-capacity imitation learning agent that can flexibly adapt its decision-making across diverse traffic and regional nuances, <br> from turning right in right-hand traffic on red in San Francisco to left-hand traffic in London and handling the `Pittsburgh left' in Pittsburgh.
-          </font>
-             </p>
-             </div>
-          -->
-          
-        </h2>
-      </div>
+    <div class="hero-body">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>
+                <h2 class="subtitle has-text-centered">
+                    <font size="+3">
+                        How can we learn a unified global-scale driving model from heterogeneous and distributed data?
+                    </font>
+
+                    <!--
+                   <div class="content has-text-justified">
+                  <p>
+                  <font size="+2">
+                We propose a high-capacity imitation learning agent that can flexibly adapt its decision-making across diverse traffic and regional nuances, <br> from turning right in right-hand traffic on red in San Francisco to left-hand traffic in London and handling the `Pittsburgh left' in Pittsburgh.
+                  </font>
+                     </p>
+                     </div>
+                  -->
+
+                </h2>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 
@@ -205,173 +204,224 @@
 
 
 <section class="section">
-  <div class="container">
+    <div class="container">
 
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            <font size="+2">
-            Human drivers can seamlessly adapt their driving decisions across geographical locations with diverse
-            conditions and rules of the road, e.g., left vs. right-hand traffic. In contrast, existing models for
-            autonomous driving have been thus far only deployed within restricted operational domains, i.e.,
-            without accounting for varying driving behaviors across locations or model scalability. In this work,
-            we propose AnyD, a single geographically-aware conditional imitation learning (CIL) model that can
-            efficiently learn from heterogeneous and globally distributed data with dynamic environmental, traffic,
-            and social characteristics. Our key insight is to introduce a high-capacity, geo-location-based
-            channel attention mechanism that effectively adapts to local nuances while also flexibly modeling
-            similarities among regions in a data-driven manner. By optimizing a contrastive imitation objective,
-            our proposed approach can efficiently scale across the inherently imbalanced data distributions and
-            location-dependent events. We demonstrate the benefits of our AnyD agent across multiple datasets, cities,
-            and scalable deployment paradigms, i.e., centralized, semi-supervised, and distributed agent training.
-            Specifically, AnyD outperforms CIL baselines by over 14% in open-loop evaluation and 30% in closed-loop
-            testing on CARLA.
-            </font>
-          </p>
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-2">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        <font size="+2">
+                            Human drivers can seamlessly adapt their driving decisions across geographical locations
+                            with diverse
+                            conditions and rules of the road, e.g., left vs. right-hand traffic. In contrast, existing
+                            models for
+                            autonomous driving have been thus far only deployed within restricted operational domains,
+                            i.e.,
+                            without accounting for varying driving behaviors across locations or model scalability. In
+                            this work,
+                            we propose AnyD, a single geographically-aware conditional imitation learning (CIL) model
+                            that can
+                            efficiently learn from heterogeneous and globally distributed data with dynamic
+                            environmental, traffic,
+                            and social characteristics. Our key insight is to introduce a high-capacity,
+                            geo-location-based
+                            channel attention mechanism that effectively adapts to local nuances while also flexibly
+                            modeling
+                            similarities among regions in a data-driven manner. By optimizing a contrastive imitation
+                            objective,
+                            our proposed approach can efficiently scale across the inherently imbalanced data
+                            distributions and
+                            location-dependent events. We demonstrate the benefits of our AnyD agent across multiple
+                            datasets, cities,
+                            and scalable deployment paradigms, i.e., centralized, semi-supervised, and distributed agent
+                            training.
+                            Specifically, AnyD outperforms CIL baselines by over 14% in open-loop evaluation and 30% in
+                            closed-loop
+                            testing on CARLA.
+                        </font>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!--/ Abstract. -->
+    <!--/ Abstract. -->
 
-  <!-- Paper video. -->
-  <br/>
-  <br/>
-  <div id="method_video" class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-2">Video</h2>
-      <div class="publication-video">
-<!--         <video controls>
-          <source src="./resources/spotlight.mp4"
-                  type="video/mp4">
-        </video> -->
+    <!-- Paper video. -->
+    <br/>
+    <br/>
+    <div id="method_video" class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+            <h2 class="title is-2">Video</h2>
+            <div class="publication-video">
+                <!--         <video controls>
+                          <source src="./resources/spotlight.mp4"
+                                  type="video/mp4">
+                        </video> -->
 
-<!--        <iframe src="https://www.youtube.com/embed/jNdtjF1VXU4?rel=0&showinfo=0&hd=1&vq=hd1080"-->
-<!--                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                <!--        <iframe src="https://www.youtube.com/embed/jNdtjF1VXU4?rel=0&showinfo=0&hd=1&vq=hd1080"-->
+                <!--                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/De-b4fgv3BM?si=ECCtzp_oWrFmzbh5?rel=0&showinfo=0&hd=1&vq=hd1080"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/De-b4fgv3BM?si=ECCtzp_oWrFmzbh5?rel=0&showinfo=0&hd=1&vq=hd1080"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
-        </iframe>
-      </div>
+                </iframe>
+            </div>
+        </div>
     </div>
-  </div>
-  <!--/ Paper video. -->
+    <!--/ Paper video. -->
 </section>
 
 
 <section class="section">
-  <div class="container">
+    <div class="container">
 
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-2">Method</h2>
-        <div class="content has-text-justified">
-          <p>
-            <font size="+2">
-            Our model maps image, region, speed, and conditional command observations to future decisions, parameterized
-            as waypoints in the map view. To efficiently learn a high-capacity model, we leverage a multi-head cross
-            attention module which fuses and adapts internal representations in a geo-aware manner. Our imitation objective,
-            defined over human-demonstrated waypoints (outlined in green), the other command branches (outlined in red),
-            and the predicted weights by the multi-head module, regularizes model optimization under diverse data distributions.
-            </font>
-          </p>
-          <img src="./resources/arch5.jpg" />
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Method</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            <font size="+2">
+                                Our model maps image, region, speed, and conditional command observations to future
+                                decisions, parameterized
+                                as waypoints in the map view. To efficiently learn a high-capacity model, we leverage a
+                                multi-head cross
+                                attention module which fuses and adapts internal representations in a geo-aware manner.
+                                Our imitation objective,
+                                defined over human-demonstrated waypoints (outlined in green), the other command
+                                branches (outlined in red),
+                                and the predicted weights by the multi-head module, regularizes model optimization under
+                                diverse data distributions.
+                            </font>
+                        </p>
+                        <img src="./resources/arch5.jpg"/>
+                    </div>
+                    <br/>
+
+                    <!-- Interpolating. -->
+                    <h3 class="title is-4">Qualitative Results</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                        </p>
+                    </div>
+                    <div class="is-vcentered interpolation-panel">
+                        <div class="content has-text-centered">
+                            <img style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"
+                                 src="./resources/vis_6.png">
+                        </div>
+                        <div class="content has-text-centered">
+                            <p>
+                                <font size="+2">
+                                    AnyD exhibits robustness in diverse scenarios, including turning right (wider turn)
+                                    in Singapore and yielding to a ‘Pittsburgh left’.
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <!--/ Interpolating. -->
+
+                    <!-- Re-rendering. -->
+
+
+                    <!--        <h3 class="title is-4">Failure cases</h3>-->
+                    <!--        <div class="content has-text-justified">-->
+                    <!--          <p>-->
+                    <!--            Sometimes artifacts occur when the depth is discontinuous around the object boundary. For instance, the boundary of the flower or the tree is blurry. We hope to address these issues in future work by segmenting the Worldsheet around depth boundaries.-->
+                    <!--          </p>-->
+                    <!--        </div>-->
+                    <!--        <div class="content has-text-centered">-->
+                    <!--          <video style="border: 1px solid #bbb; border-radius: 10px;"-->
+                    <!--                 controls-->
+                    <!--                 muted-->
+                    <!--                 width="35%">-->
+                    <!--            <source src="./resources/compressed_no_mesh_scenery11_pad.mp4"-->
+                    <!--                    type="video/mp4">-->
+                    <!--          </video>-->
+                    <!--          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                    <!--          <video style="border: 1px solid #bbb; border-radius: 10px;"-->
+                    <!--                 controls-->
+                    <!--                 muted-->
+                    <!--                 width="35%">-->
+                    <!--            <source src="./resources/compressed_no_mesh_paris_pad.mp4"-->
+                    <!--                    type="video/mp4">-->
+                    <!--          </video>-->
+                    <!--        </div>-->
+
+
+                </div>
+            </div>
         </div>
-        <br/>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Qualitative Results</h3>
-        <div class="content has-text-justified">
-          <p>
-          </p>
-        </div>
-        <div class="is-vcentered interpolation-panel">
-          <div class="content has-text-centered">
-            <img style="border: 1px solid #bbb; border-radius: 10px; width: 50%;" src="./resources/vis_6.png">
-          </div>
-          <div class="content has-text-centered">
-            <p>
-              <font size="+2">
-              AnyD exhibits robustness in diverse scenarios, including turning right (wider turn) in Singapore and yielding to a ‘Pittsburgh left’.
-              </font>
-            </p>
-          </div>
-        </div>
-        <br/>
-        <br/>
-
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-
-
-<!--        <h3 class="title is-4">Failure cases</h3>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Sometimes artifacts occur when the depth is discontinuous around the object boundary. For instance, the boundary of the flower or the tree is blurry. We hope to address these issues in future work by segmenting the Worldsheet around depth boundaries.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--        <div class="content has-text-centered">-->
-<!--          <video style="border: 1px solid #bbb; border-radius: 10px;"-->
-<!--                 controls-->
-<!--                 muted-->
-<!--                 width="35%">-->
-<!--            <source src="./resources/compressed_no_mesh_scenery11_pad.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--          <video style="border: 1px solid #bbb; border-radius: 10px;"-->
-<!--                 controls-->
-<!--                 muted-->
-<!--                 width="35%">-->
-<!--            <source src="./resources/compressed_no_mesh_paris_pad.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-
-
-
-      </div>
+        <!--/ Animation. -->
     </div>
-    <!--/ Animation. -->
-  </div>
 </section>
 
 
 <!-- TODO -->
 <section class="section" id="BibTeX">
-  <div class="container content">
-    <h2 class="title">BibTeX</h2>
-    <font size="+2">
+
+    <div class="container content">
+        <h2 class="title is-2" style="text-align: center;">BibTeX</h2>
+        <font size="+2">
     <pre><code>@inproceedings{zhu2023learning,
   title={Learning to Drive Anywhere},
   author={Zhu, Ruizhao and Huang, Peng and Ohn-Bar, Eshed and Saligrama, Venkatesh},
   booktitle={7th Annual Conference on Robot Learning},
-  year={2023}}
-}</code></pre>
-    </font>
-  </div>
+  year={2023}}}</code></pre>
+        </font>
+    </div>
 </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a href="./resources/anonymous.pdf" class="large-font bottom_buttons"> <!-- TODO -->
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a href="https://github.com/globaldriver/geco" class="large-font bottom_buttons"> <!-- TODO -->
-        <i class="fab fa-github"></i>
-      </a>
-      <br />
-      <p>Page template borrowed from <a href="https://worldsheet.github.io/">Worldsheet</a>.</p>
-      <p>Copyright © 2023 Boston University</p>
+<!--ACKNOWLEDGEMENT-->
+
+<section class="section" id="Acknowledgement">
+    <div class="container">
+    <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-2" style="text-align: center;">Acknowledgement</h2>
+
+
+                <div class="content has-text-justified">
+                    <p>
+                        <font size="+2">
+                        This research was supported by a Red Hat Research Grant, Army Research Office Grant
+                        W911NF2110246, National Science Foundation grants (CCF-2007350, CCF-1955981, and IIS-2152077),
+                        and AFRL Contract no. FA8650-22-C-1039.
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <a href="https://arxiv.org/abs/2309.12295f" class="large-font bottom_buttons"> <!-- TODO -->
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a href="https://github.com/h2xlab/anyd/" class="large-font bottom_buttons"> <!-- TODO -->
+                <i class="fab fa-github"></i>
+            </a>
+            <br/>
+            <p>Page template borrowed from <a href="https://worldsheet.github.io/">Worldsheet</a>.</p>
+            <p>Copyright © 2023 Boston University</p>
+        </div>
+    </div>
 </footer>
 
 </body>
