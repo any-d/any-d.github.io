@@ -24,19 +24,22 @@ new THREE.TextureLoader().load('//unpkg.com/three-globe/example/img/earth-water.
 });
 
 
+let rendererWidth=window.innerWidth
+let rendererHeight=window.innerHeight*0.7
+
 
 // Setup WebGLRenderer
 const globeWebGLRenderer = new THREE.WebGLRenderer(
     {antialias:true, //抗鋸齒
     alpha:true} //抗鋸齒
 );
-globeWebGLRenderer.setSize(window.innerWidth, window.innerHeight);
+globeWebGLRenderer.setSize(rendererWidth,rendererHeight);
 document.getElementById('globeViz').appendChild(globeWebGLRenderer.domElement);
 
 
 // Setup CSS2DRenderer
 const markerCss2DRenderer=new THREE.CSS2DRenderer();
-markerCss2DRenderer.setSize(window.innerWidth, window.innerHeight);
+markerCss2DRenderer.setSize(rendererWidth,rendererHeight);
 markerCss2DRenderer.domElement.style.position = 'absolute';
 markerCss2DRenderer.domElement.style.top = '0px';
 markerCss2DRenderer.domElement.style.pointerEvents = 'none';
@@ -56,7 +59,7 @@ scene.add(directionalLight);
 
 // Setup camera
 const camera = new THREE.PerspectiveCamera();
-camera.aspect = window.innerWidth/window.innerHeight;
+camera.aspect = rendererWidth/rendererHeight;
 camera.updateProjectionMatrix();
 //相機角度
 camera.position.z = 240
@@ -77,9 +80,9 @@ camera.position.x = 0
 
 
 const orbitControls = new THREE.OrbitControls(camera, globeWebGLRenderer.domElement);
-orbitControls.autoRotate=true
-orbitControls.minDistance = 300;
-orbitControls.maxDistance = 300;
+orbitControls.autoRotate=true;
+orbitControls.minDistance = 255;
+orbitControls.maxDistance = 255;
 orbitControls.rotateSpeed = 1;
 // tbControls.zoomSpeed = 0.8;
 orbitControls.enableZoom=false;
@@ -88,10 +91,12 @@ orbitControls.enableDamping=true;//惯性效果
 
 //窗口伸縮
 function onWindowResize(){
-    camera.aspect = window.innerWidth / window.innerHeight;
+    rendererWidth=window.innerWidth
+    rendererHeight=window.innerHeight*0.7
+    camera.aspect = rendererWidth / rendererHeight;
     camera.updateProjectionMatrix();
-    globeWebGLRenderer.setSize( window.innerWidth, window.innerHeight );
-    markerCss2DRenderer.setSize(window.innerWidth,window.innerHeight);
+    globeWebGLRenderer.setSize( rendererWidth, rendererHeight );
+    markerCss2DRenderer.setSize(rendererWidth,rendererHeight);
 }
 window.addEventListener( 'resize', onWindowResize, false );
 
@@ -106,9 +111,9 @@ function onPointerMove( event ) {
     // calculate pointer position in normalized device coordinates
     // (-1 to +1) for both components
 
-    pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+    pointer.x = ( event.clientX / rendererWidth ) * 2 - 1;
     let canvasElement=document.getElementsByTagName("canvas");
-    pointer.y = - ( (event.pageY-getOffsetAgainstPage(globeWebGLRenderer.domElement).top) / window.innerHeight ) * 2 + 1;
+    pointer.y = - ( (event.pageY-getOffsetAgainstPage(globeWebGLRenderer.domElement).top) / rendererHeight ) * 2 + 1;
 
     // console.log(event.clientY,event.pageY, pointer.y)
 
