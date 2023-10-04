@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="stylesheet" href="./static/css/tippy.css">
-    <link rel="stylesheet" href="./static/css/tippy2.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -68,10 +66,6 @@
     <!-- for globe   -->
     <script src="//unpkg.com/three"></script>
     <script src="//unpkg.com/three-globe"></script>
-
-    <script src="./static/js/@popperjs.js"></script>
-    <script src="./static/js/tippy.js"></script>
-
 
 
 </head>
@@ -148,15 +142,17 @@
 <!--for globe-->
 <div id="globeViz" style="position: relative"></div>
 <script type="importmap">{ "imports": { "three": "https://unpkg.com/three/build/three.module.js" }}</script>
-<script src="globe_dev4.js" type="module" ></script>
+<script src="globe_v3.js" type="module" ></script>
+
+
 
 <section class="hero teaser">
     <div class="hero-body">
         <div class="columns is-centered">
             <div class="column is-four-fifths">
-<!--                <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>-->
+                <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>
                 <h2 class="subtitle has-text-centered">
-                    <font size="+2">
+                    <font size="+3">
                         How can we learn a unified global-scale driving model from heterogeneous and distributed data?
                     </font>
 
@@ -175,33 +171,6 @@
         </div>
     </div>
 </section>
-
-
-<!--<section class="hero teaser">-->
-<!--    <div class="hero-body">-->
-<!--        <div class="columns is-centered">-->
-<!--            <div class="column is-four-fifths">-->
-<!--                <center><img src="./resources/globaldrives.jpg" width="1000" class="center"></center>-->
-<!--                <h2 class="subtitle has-text-centered">-->
-<!--                    <font size="+3">-->
-<!--                        How can we learn a unified global-scale driving model from heterogeneous and distributed data?-->
-<!--                    </font>-->
-
-<!--                    &lt;!&ndash;-->
-<!--                   <div class="content has-text-justified">-->
-<!--                  <p>-->
-<!--                  <font size="+2">-->
-<!--                We propose a high-capacity imitation learning agent that can flexibly adapt its decision-making across diverse traffic and regional nuances, <br> from turning right in right-hand traffic on red in San Francisco to left-hand traffic in London and handling the `Pittsburgh left' in Pittsburgh.-->
-<!--                  </font>-->
-<!--                     </p>-->
-<!--                     </div>-->
-<!--                  &ndash;&gt;-->
-
-<!--                </h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 
 <!--<section class="hero is-light is-small">-->
