@@ -201,7 +201,7 @@ export const datapoints = [
             {label: 'Country: ', text: 'Chile'},
             {label: 'Location: ', text: '33.4489° S, 70.6693° W'},
             {label: 'Direction: ', text: 'Right-hand traffic'},
-            {label: 'Scenario: ', text: 'U-turns are prohibited at intersections.'}
+            {label: 'Scenario: ', text: 'U-turns are forbidden at intersections'}
         ]
     })
 
