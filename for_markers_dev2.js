@@ -194,7 +194,16 @@ export const datapoints = [
             {label: 'Scenario: ', text: 'No turn left on red'}
         ]
     })
-
+    ,new Datapoint(-33.4489, -70.6693, {
+        image_path: "./static/images/Santiago.png",
+        labelsAndTexts: [
+            {label: 'City: ', text: 'Santiago'},
+            {label: 'Country: ', text: 'Chile'},
+            {label: 'Location: ', text: '33.4489° S, 70.6693° W'},
+            {label: 'Direction: ', text: 'Right-hand traffic'},
+            {label: 'Scenario: ', text: 'U-turns are prohibited at intersections.'}
+        ]
+    })
 
 ];
 
