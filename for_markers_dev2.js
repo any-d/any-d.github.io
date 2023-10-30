@@ -184,6 +184,17 @@ export const datapoints = [
         ]
     })
 
+    ,new Datapoint(-26.2041, 28.0473, {
+        image_path: "./static/images/Johannesburg.png",
+        labelsAndTexts: [
+            {label: 'City: ', text: 'Johannesburg'},
+            {label: 'Country: ', text: 'South Africa'},
+            {label: 'Location: ', text: '26.2041° S, 28.0473° E'},
+            {label: 'Direction: ', text: 'Left-hand traffic'},
+            {label: 'Scenario: ', text: 'No turn left on red'}
+        ]
+    })
+
 
 ];
 
